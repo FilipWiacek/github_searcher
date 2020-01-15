@@ -1,0 +1,217 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #666666;
+    font-family: "Montserrat", sans-serif ;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form {
+    margin-top: 200px;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+    width: 600px;
+}
+
+form > .form-left {
+    width: 60%;
+}
+
+form > .form-left > input {
+    width: 100%;
+    height: 50px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    font-size: 25px;
+}
+
+form > .form-left > input::placeholder {
+    color: #ffffff;
+    font-size: 25px;
+}
+
+.form-input-line {
+    width: 0;
+    height: 2px;
+    background-color: #ffffff;
+    transition: width 1.5s;
+}
+
+.form-right {
+    width: 156px;
+    height: 54px;
+    position: relative;
+    overflow: hidden;
+}
+
+.form-right > button {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    font-size: 25px;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.form-right-border {
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #B3FFAB;
+    background: -webkit-linear-gradient(to right, #12FFF7, #B3FFAB);
+    background: linear-gradient(to right, #12FFF7, #B3FFAB);
+    animation-direction: reverse;
+    transform: translateY(0);
+    transition: transform .2s;
+}
+
+.form-left-border {
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    background-color: #B3FFAB;
+    background: -webkit-linear-gradient(to right, #12FFF7, #B3FFAB);
+    background: linear-gradient(to right, #12FFF7, #B3FFAB);
+    top: 0;
+    left: 152px;
+    transform: translateY(0);
+    transition: transform .2s;
+}
+
+.form-top-border {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    top: 0;
+    left: 0;
+    background-color: #B3FFAB;
+    background: -webkit-linear-gradient(to right, #12FFF7, #B3FFAB);
+    background: linear-gradient(to right, #12FFF7, #B3FFAB);
+    transform: translateX(100%);
+    transition: transform .2s;
+}
+
+.form-bottom-border {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    top: 50px;
+    left: 0;
+    background-color: #B3FFAB;
+    background: -webkit-linear-gradient(to right, #12FFF7, #B3FFAB);
+    background: linear-gradient(to right, #12FFF7, #B3FFAB);
+    transform: translateX(-100%);
+    transition: transform .2s;
+}
+
+.warning {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: 1200;
+    transform: translateY(-100%);
+    transition: transform .3s;
+}
+
+.warning > .warning-top {
+    width: 400px;
+    height: 150px;
+    background-color: #e85e6c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.warning > .warning-top > i {
+    color: #ffffff;
+    font-size: 50px;
+}
+
+.warning > .warning-bottom {
+    background-color: #ffffff;
+    width: 400px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+}
+
+.warning > .warning-bottom > h2 {
+    margin-bottom: 10px;
+}
+
+.github-logo {
+    width: 250px;
+    height: 250px;
+    background-image: url("../assets/img/25231.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: scroll;
+    position: relative;
+}
+
+.github-logo:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+}
+.list {
+    z-index: 5;
+}
+
+.list > li {
+    width: 600px;
+    height: 400px;
+    list-style: none;
+    background-color: rgba(0,0,0,0.6);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    color: #ffffff;
+    margin-top: 10px;
+}
+
+.list > li > hr {
+    width: 100%;
+    height: 2px;
+    color: #ffffff;
+}
+
+.list > li > img {
+    margin-top: 30px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+}
+
+#loader {
+    width: 100%;
+    height: 100%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+

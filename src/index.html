@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style/style.css">
+    <script src="script/main.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+            <div class="warning" id="warning">
+            <div class="warning-top">
+                <i class="far fa-times-circle error-modal__top__icon"></i>
+            </div>
+            <div class="warning-bottom">
+                <h2>Ooops!</h2>
+                <h3>Something went wrong. Make sure that user you are looking at exists.</h3>
+            </div>
+        </div>
+
+        <form id="user-form">
+            <div class="form-left">
+                <input type="text" placeholder="Find a Github user" id="loginInput">
+                <div class="form-input-line" id="form-input-line"></div>
+            </div>
+
+            <div class="form-right" id="form-right">
+                <div class="form-top-border" id="form-top-border"></div>
+                <div class="form-right-border" id="form-right-border"></div>
+                <div class="form-bottom-border" id="form-bottom-border"></div>
+                <div class="form-left-border" id="form-left-border"></div>
+                <button id="form-button">Search</button>
+            </div>
+        </form>
+
+
+        <div class="loader-container" id="loader">
+            <img src="assets/img/ball-triangle.svg" alt="loader">
+        </div>
+
+        <div class="list-box">
+            <ul id="list" class="list"></ul>
+        </div>
+
+        <div class="github-logo"></div>
+    </div>
+</body>
+</html>
